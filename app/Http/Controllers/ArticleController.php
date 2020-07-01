@@ -26,7 +26,7 @@ class ArticleController extends Controller
      */
     public function create()
     {
-        //
+        //This is some pullshit comment
         return view("articles.create");
     }
 
