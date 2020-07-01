@@ -1,0 +1,91 @@
+Articles Project
+==============================================
+1- Create Project Folder!
+2- Add the assets files
+3- Create DB - link it in the env. folder 
+4- Make Model migration - controller with resources: 
+	php artisan make:model Models/Article -mc -r
+	$table->id();
+	$table->string("title",100);
+	$table->string("summary");
+	$table->text("details");
+	$table->string("image");
+	$table->integer("tag_id");
+	$table->boolean("published")->default(0);
+	$table->timestamps();	
+5- Make Model migration - controller with resources: 
+	php artisan make:model Models/Tag -mc -r
+	$table->id();
+	$table->string('title');
+	$table->boolean('active')->default(1);
+	$table->string("subtitle",100)->nullable();
+	$table->string("description")->nullable();
+	$table->timestamps();
+6- php artisan migrate || php artisan migrate:rollback
+7- Insert Random Data to the database! 
+==============================================
+8- Make Resource route
+	Route::resource("articles","ArticleController");
+	Route::resource("tags","TagController");
+	php artisan route:list
+==============================================
+9- ArticleController! 
+9.1- 
+
+
+
+
+==============================================
+1- you create repositrey on Git! 
+
+2- to download and clone an online repositery 
+	git clone https://github.com/omasriDev/blog.git \\on specified directory! 
+	
+3- 	To see your branches:
+	git branch  //git local branches
+	git branch -a // git all branches
+	
+4- To Create a New Branch: 	git branch AddNewFeatures 
+ هو بينشئ برانش ولكن ما بوديك عليها 
+ كيف بدك تروح للبرانش اللي إنت أنشاته
+	git checkout AddStaticPageCrud
+	
+8- To make a new branch and move to it and define it's parent
+	git checkout -b AddNewFeature master
+
+5- git fetch //refresh the master changes to be able to get the branches names!
+
+6- After finishing your work with code and adding your updated features to the repositery
+ make sure your master is latest updated!
+	git pull origin master
+then
+	git commit -am "updated with master" //am: attach breif message about the updated features! 
+
+7- 
+	
+ To merge your changes from the branch to master 
+ there are two ways 
+ 1- switch to master then pull from branch
+ 
+ git checkout -b AddStaticPageCrud origin/AddStaticPageCrud
+ أنشأت على جهازها  Add static Page Crud
+ وأخدته كنسخة من البرانش اللي عالسيرفر
+ 
+ 
+ Class Room Code 
+ USVCMHF
+ 	git status
+	
+بنفعش أعمل push 
+بدون commit
+ وبنفعش أعمله بدون ما يكون في تعديلات
+ 
+ 
+ 
+
+ 
+
+ 
+ 
+ 
+ 
